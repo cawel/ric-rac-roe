@@ -2,8 +2,8 @@
 
 Ric-Rac-Roe is the classic tic-tac-toe game with a choice of 3 interfaces:
 - command line interface (cli)
-- web app (via Sinatra)
-- GUI (via Shoes)
+- web app (using Sinatra)
+- GUI desktop app (using Shoes)
 
 The motivation behind this project was to experiment with a few technologies: Sinatra, Shoes, HAML. In addition to that, an effort has been made to write concise Ruby code.
 
@@ -12,20 +12,20 @@ The motivation behind this project was to experiment with a few technologies: Si
 
 === CLI 
 
-Run the executable Ruby file:
+From the project root directory, run the executable Ruby file:
 
   ./cli/run.rb
 
 
 === Sinatra interface
 
-Start the Sinatra web server with:
+From the project root directory, start the Sinatra web server with:
 
   ruby /sinatra/server.rb
 
 
 === Shoes interface
 
-- Download Shoes @ http://shoooes.net/downloads/
+- Download Shoes @ http://shoooes.net/downloads
 - Once installed, open Shoes and select the '/shoes/app.rb' file
 
