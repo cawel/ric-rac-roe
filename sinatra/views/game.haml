@@ -1,0 +1,15 @@
+%h1 Game
+%table{:border => 2}
+  - @squares.each_with_index do |row, y|
+    %tr
+      - row.each_with_index do |square, x|
+        %td.square
+          - if square.nil?
+            %form{:method => "post", :action => "/play"}
+              %input{:type => "hidden", :name => "x", :value => x}
+              %input{:type => "hidden", :name => "y", :value => y}
+              %input{:type => "submit", :value => square.nil?? " " : square}
+          - else
+            = square
+%br
+%p= "<span style='font-weight: bold;'>Message</span>: #{@message}"

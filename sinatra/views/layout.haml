@@ -1,0 +1,11 @@
+%html
+  %head
+    %link{ :href => "/main.css", :media => "screen", :rel => "Stylesheet", :type => "text/css"}
+%body
+  %div.container
+    %div.header
+      <a href="/">Home</a> | <a href="/new">New Game</a> | <a href="/about">About</a>
+    %div.contents
+      = yield
+    %hr
+    %div.footer= "powered by Sinatra v#{Sinatra::VERSION}"

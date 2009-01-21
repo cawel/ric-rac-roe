@@ -1,0 +1,2 @@
+class SquareAlreadyTakenError < StandardError
+end

@@ -1,0 +1,2 @@
+class OutsideGridError < StandardError
+end
