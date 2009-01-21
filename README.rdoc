@@ -12,18 +12,18 @@ The motivation behind this project was to experiment with a few technologies: Si
 
 === CLI 
 
+Run the executable Ruby file:
 ./cli/run.rb
 
 
 === Sinatra interface
 
+Start the Sinatra web server with:
 ruby /sinatra/server.rb
 
 
 === Shoes interface
 
-coming soon
+- Download Shoes @ http://shoooes.net/downloads/
+- Once installed, open Shoes and select the '/shoes/app.rb' file
 
-== Design
- 
-coming soon
