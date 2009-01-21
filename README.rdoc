@@ -13,13 +13,15 @@ The motivation behind this project was to experiment with a few technologies: Si
 === CLI 
 
 Run the executable Ruby file:
-./cli/run.rb
+
+  ./cli/run.rb
 
 
 === Sinatra interface
 
 Start the Sinatra web server with:
-ruby /sinatra/server.rb
+
+  ruby /sinatra/server.rb
 
 
 === Shoes interface
