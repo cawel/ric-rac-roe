@@ -1,9 +1,6 @@
-require 'rubygems'
-require 'sinatra'
-require 'sinatra/test/rspec'
 require File.join(File.dirname(__FILE__), '../../server.rb')
-
-Dir.chdir "../../"
+require 'rubygems'
+require 'sinatra/test/rspec'
 
 describe 'The Ric-Rac-Roe routes' do
 

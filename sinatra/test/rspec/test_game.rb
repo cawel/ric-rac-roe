@@ -1,9 +1,6 @@
-require 'rubygems'
-require 'sinatra'
-require 'sinatra/test/rspec'
 require File.join(File.dirname(__FILE__), '../../server.rb')
-
-Dir.chdir('../../')
+require 'rubygems'
+require 'sinatra/test/rspec'
 
 describe 'Game logic' do
 
@@ -16,7 +13,6 @@ describe 'Game logic' do
 	end
 
 	it 'should be able to play in 0,0' do
-		puts @session_game
 		post '/play', {:x => 0, :y => 0}, 'rack.session' => { :game => @session_game }
 		@response.should be_ok
 	end
