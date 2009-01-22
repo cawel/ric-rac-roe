@@ -22,9 +22,9 @@ Shoes.app(:title => "Ric-rac-roe", :width => 630, :height => 670) do
 			end
 		end
 		@status = para "Let the game begin!", :stroke => white
-		@new_game = button "new game" do
-			new_game
-		end
+		#@new_game = button "new game" do
+			#new_game
+		#end
 	end
 
 

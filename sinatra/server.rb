@@ -15,23 +15,17 @@ get '/new' do
 end
 
 post '/play' do 
-	game = session[:game]
-	game.play(params[:x], params[:y])
-	redirect '/over' if game.over?
+	set_session_data
+	@game.play(params[:x], params[:y])
+	redirect '/over' if @game.over?
 
-	@squares = game.squares
-	@message = game.status_message
+	@message = @game.status_message
 	haml :game
 end
 
 get '/over' do
-	game = session[:game]
-	@squares = game.squares
-	if game.winner.nil?
-		@message = "Draw!"
-	else
-		@message = "Player #{game.winner} won!"
-	end
+	end_game
+	@message = @game.winner.nil? ? "Draw!" : "Player #{@game.winner} won!"
 	haml :game
 end
 
@@ -39,9 +33,22 @@ get '/about' do
 	haml :about
 end
 
+
+### helper methods
+
 def new_game
-	game = GameSinatra.new
-	session[:game] = game
-	@squares = game.squares
+	 session[:game] = GameSinatra.new
+	 @squares = session[:game].squares
 end
 
+def end_game
+	set_session_data
+	@squares.each_with_index do |row, y| 
+		row.each_with_index { |square, x| @squares[y][x] = '&nbsp;' if square.nil? }
+	end
+end
+
+def set_session_data
+	@game = session[:game]
+	@squares = @game.squares
+end
