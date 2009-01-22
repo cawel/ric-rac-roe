@@ -53,21 +53,21 @@ class Grid
 
 	def vertical_win?
 		(0..2).each do |column|
-			return true if [@squares[0][column], @squares[1][column], @squares[2][column]].same_elements? 
+			return true if [@squares[0][column], @squares[1][column], @squares[2][column]].common_element 
 		end
 		false
 	end
 
 	def horizontal_win?
 		@squares.each do |row|
-			return true if row.same_elements?
+			return true if row.common_element
 		end
 		false
 	end
 
 	def diagonal_win?
-		return true if [@squares[0][0], @squares[1][1], @squares[2][2]].same_elements?
-		return true if [@squares[2][0], @squares[1][1], @squares[0][2]].same_elements?
+		return true if [@squares[0][0], @squares[1][1], @squares[2][2]].common_element
+		return true if [@squares[2][0], @squares[1][1], @squares[0][2]].common_element
 		false
 	end
 

@@ -3,7 +3,7 @@ require 'sinatra'
 require 'sinatra/test/rspec'
 require File.join(File.dirname(__FILE__), '../../server.rb')
 
-Dir.chdir('../../')
+Dir.chdir "../../"
 
 describe 'The Ric-Rac-Roe routes' do
 
@@ -26,11 +26,6 @@ describe 'The Ric-Rac-Roe routes' do
 		@response.should be_ok
 	end
 
-	it 'should GET /about' do
-		get '/about'
-		@response.should be_ok
-	end
-
 	it 'should POST /play' do
 		post '/play', {:x => 0, :y => 0}, 'rack.session' => { :game => @session_game }
 		@response.should be_ok
@@ -38,6 +33,11 @@ describe 'The Ric-Rac-Roe routes' do
 
 	it 'should GET /over' do
 		get '/over', {}, 'rack.session' => { :game => @session_game }
+		@response.should be_ok
+	end
+
+	it 'should GET /about' do
+		get '/about'
 		@response.should be_ok
 	end
 
