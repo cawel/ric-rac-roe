@@ -10,7 +10,7 @@ The motivation behind this project was to experiment with a few technologies: Si
 
 == How to run the game
 
-=== CLI 
+=== Command line interface 
 
 From the project root directory, run the executable Ruby file:
 
