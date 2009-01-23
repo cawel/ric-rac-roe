@@ -24,12 +24,12 @@ class TestGrid < Test::Unit::TestCase
 	end
 
 	def test_should_raise_when_square_is_outside_grid
-		assert_raise(OutsideGridError){@grid.play(Position.new(3,0), Grid::NAUGHT)}
+		assert_raise(Grid::OutsideGridError){@grid.play(Position.new(3,0), Grid::NAUGHT)}
 	end
 
 	def test_should_raise_when_square_is_already_taken
 		@grid.play(Position.new(0,0), Grid::NAUGHT)
-		assert_raise(SquareAlreadyTakenError){@grid.play(Position.new(0,0), Grid::NAUGHT)}
+		assert_raise(Grid::SquareAlreadyTakenError){@grid.play(Position.new(0,0), Grid::NAUGHT)}
 	end
 
 	def test_should_detect_when_a_grid_is_full

@@ -1,2 +1,0 @@
-class ParsingError < StandardError
-end

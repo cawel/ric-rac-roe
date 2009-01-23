@@ -1,6 +1,6 @@
-require File.join(File.dirname(__FILE__), 'parsing_error.rb')
-
 class Position
+	
+	class ParsingError < StandardError; end
 
 	attr_accessor :x, :y
 
@@ -11,7 +11,7 @@ class Position
 	def self.parse(digits)
 		new(*digits.scan(/(\d).*(\d)/).flatten.map{|d| d.to_i})
 	rescue 
-		raise ParsingError, "invalid input! Please enter 2 coordinates. Example: \"2 0\". " 
+		raise ParsingError, "Hrm. Please enter 2 coordinates. Example: \"2 0\". " 
 	end
 
 	def inspect

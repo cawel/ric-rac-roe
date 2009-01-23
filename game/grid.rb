@@ -1,9 +1,11 @@
 require File.join(File.dirname(__FILE__), 'array_extensions.rb')
-require File.join(File.dirname(__FILE__), 'outside_grid_error.rb')
-require File.join(File.dirname(__FILE__), 'square_already_taken_error.rb')
 require File.join(File.dirname(__FILE__), 'position.rb')
 
 class Grid
+
+	class OutsideGridError < StandardError; end
+	class SquareAlreadyTakenError < StandardError; end
+	
 	NAUGHT = 'O'
 	CROSS = 'X'
 

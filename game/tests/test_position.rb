@@ -18,6 +18,6 @@ class TestPosition < Test::Unit::TestCase
 	end
 
 	def test_should_raise_exception_on_invalid_input
-		assert_raise(ParsingError){ Position.parse("abc") }
+		assert_raise(Position::ParsingError){ Position.parse("abc") }
 	end
 end

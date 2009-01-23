@@ -1,2 +1,0 @@
-class OutsideGridError < StandardError
-end
