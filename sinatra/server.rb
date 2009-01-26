@@ -4,6 +4,10 @@ require File.join(File.dirname(__FILE__), 'game_sinatra.rb')
 
 enable :sessions
 
+#
+# routes
+# 
+
 get '/' do
 	haml :index
 end
@@ -34,21 +38,25 @@ get '/about' do
 end
 
 
-### helper methods
+#
+# helper methods
+#
 
-def new_game
-	 session[:game] = GameSinatra.new
-	 @squares = session[:game].squares
-end
-
-def end_game
-	set_session_data
-	@squares.each_with_index do |row, y| 
-		row.each_with_index { |square, x| @squares[y][x] = '&nbsp;' if square.nil? }
+helpers do
+	def new_game
+		session[:game] = GameSinatra.new
+		@squares = session[:game].squares
 	end
-end
 
-def set_session_data
-	@game = session[:game]
-	@squares = @game.squares
+	def end_game
+		set_session_data
+		@squares.each_with_index do |row, y| 
+			row.each_with_index { |square, x| @squares[y][x] = '&nbsp;' if square.nil? }
+		end
+	end
+
+	def set_session_data
+		@game = session[:game]
+		@squares = @game.squares
+	end
 end
