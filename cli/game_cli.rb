@@ -20,7 +20,9 @@ class GameCli
 		Position.parse gets
 	end
 
-	#methods for displaying stuff on the command line
+	#
+	# methods for displaying stuff on the command line
+	#
 	def display
 		puts ""
 		puts squares_as_string
