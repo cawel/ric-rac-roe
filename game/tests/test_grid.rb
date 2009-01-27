@@ -76,7 +76,9 @@ class TestGrid < Test::Unit::TestCase
 		assert_equal(Grid::NAUGHT, @grid.winner)
 	end
 	
-  #helper methods
+	#
+  # helper methods
+	#
 	def assert_empty_grid_except_for posx, posy
 		(0..2).each do |x|
 			(0..2).each do |y|

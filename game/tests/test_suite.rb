@@ -1,3 +1,6 @@
+# tests suite runner
+# It takes all tests in current directory (except for this file) and run them
+
 tmp_cd = Dir.pwd
 
 Dir.chdir File.dirname( __FILE__)

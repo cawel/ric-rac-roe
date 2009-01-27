@@ -13,13 +13,13 @@ class TestArrayExtensions < Test::Unit::TestCase
 
 	context 'When the array contains the same elements' do
 		it 'should return this element' do
-			assert 1, [1,1,1].common_element
+			assert_equal(1, [1,1,1].common_element)
 		end
 	end
 
 	context 'When the array does not contain the same elements' do
 		it 'should return nil' do
-			assert 1, [1,2,3].common_element
+			assert_nil [1,2,3].common_element
 		end
 	end
 

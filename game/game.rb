@@ -1,13 +1,13 @@
 require File.join(File.dirname(__FILE__), 'position.rb')
 require File.join(File.dirname(__FILE__), 'grid.rb')
 
-# There are 2 strategies for using this tic-tac-toe game:
+# There are 2 possibilities for using this tic-tac-toe game:
 #
 # Game#run_until_later 
-#   which takes care of all moves in the game
+#   takes care of all moves in the game
 #
 # Game#play
-#   which plays a single move in the game
+#   plays a single move in the game
 
 class Game
 
