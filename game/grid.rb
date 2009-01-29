@@ -13,9 +13,7 @@ class Grid
 	attr_reader :squares
 
 	def initialize
-		# 3 x 3 grid with nils inside
-		@squares = []
-		3.times { @squares << Array.new(3)}
+		@squares = [[nil, nil, nil], [nil, nil, nil], [nil, nil, nil]]
 	end
 
 	def play position, player
